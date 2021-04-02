@@ -6,7 +6,7 @@ from .models import Post
 # Create your views here.
 def home(request):
     context = {
-        'posts': Post.objects.all() # why????
+        'posts': Post.objects.all() # why??????
     }
     return render(request, 'blog/home.html', context)
 
