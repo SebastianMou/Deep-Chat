@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Post(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now) #current date time every update (auto_now=True) - current date time when created but never update (auto_now_add=True)
