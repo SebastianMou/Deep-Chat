@@ -12,6 +12,17 @@
           </div>
         </div>
         <!-- FORM HERE -->
+        <form method="POST" enctype="multipart/form-data"> <!-- wont be saving the img in the background -->
+          {% csrf_token %} <!-- Cross Site Request Forgery / portection -->
+          <fieldset class="form-group"> <!--element is used to group several controls as well as labels / bootstrap: form-group-->
+              <legend class="border-bottom mb-4">Profile Info</legend>
+              {{ u_form|crispy }}
+              {{ p_form|crispy }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">Update</button>
+          </div>
+        </form>
       </div>
 {% endblock content %} 
 
