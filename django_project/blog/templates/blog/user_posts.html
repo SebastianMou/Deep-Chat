@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
 {% block content %}
+<h6 style="color: green;" class="mb-3">post's by '{{ view.kwargs.username }}' post's: ({{ page_obj.paginator.count }})</h6>
     {% for post in posts %}    
         <article style="background-color: #272a2d  ;" class="media content-section">
             <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" alt="">

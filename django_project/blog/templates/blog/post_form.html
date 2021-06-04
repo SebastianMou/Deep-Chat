@@ -1,14 +1,14 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
+    <div style="background-color: #272a2d;" class="content-section">
         <form method="POST">
             {% csrf_token %} <!-- Cross Site Request Forgery / portection -->
             <fieldset class="form-group"> <!--element is used to group several controls as well as labels / bootstrap: form-group-->
-                <legend class="border-bottom mb-4">Blog Post</legend>
+                <legend style="color: white;" class="border-bottom mb-4">Blog Post</legend>
                 {{ form|crispy }}
             </fieldset>
-            <div class="form-group">
+            <div class="">
                 <button class="btn btn-outline-info" type="submit">Post</button>
             </div>
         </form>
